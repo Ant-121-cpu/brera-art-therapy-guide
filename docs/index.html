@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Brera 艺术治疗申请指南</title>
+    <meta
+      name="description"
+      content="面向应用心理学背景申请者的 Brera 艺术治疗方向可视化申请指南，涵盖学院信息、项目匹配度、申请时间线、作品集准备与官方来源链接。"
+    />
+    <style>
+      :root {
+        --paper: #f4efe8;
+        --paper-deep: #e9e1d6;
+        --ink: #241b17;
+        --muted: #695b53;
+        --line: rgba(36, 27, 23, 0.12);
+        --card: rgba(255, 251, 246, 0.72);
+        --accent: #b7613e;
+        --accent-soft: rgba(183, 97, 62, 0.14);
+        --jade: #567f74;
+        --jade-soft: rgba(86, 127, 116, 0.14);
+        --gold: #c7a067;
+        --shadow: 0 28px 80px rgba(39, 26, 18, 0.12);
+        --radius: 28px;
+        --radius-sm: 18px;
+        --max: 1220px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(1000px 700px at 10% 8%, rgba(199, 160, 103, 0.18), transparent 60%),
+          radial-gradient(900px 680px at 88% 14%, rgba(86, 127, 116, 0.16), transparent 60%),
+          radial-gradient(900px 640px at 22% 88%, rgba(183, 97, 62, 0.16), transparent 62%),
+          linear-gradient(180deg, var(--paper), var(--paper-deep));
+        font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.08;
+        background-image:
+          linear-gradient(rgba(36, 27, 23, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(36, 27, 23, 0.08) 1px, transparent 1px);
+        background-size: 22px 22px;
+        mask-image: radial-gradient(circle at center, black 42%, transparent 90%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 24px 20px 80px;
+      }
+
+      .masthead {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 16px 0;
+        backdrop-filter: blur(16px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .seal {
+        width: 46px;
+        height: 46px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background:
+          radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), transparent 45%),
+          linear-gradient(135deg, rgba(183, 97, 62, 0.16), rgba(86, 127, 116, 0.08));
+        box-shadow: var(--shadow);
+        position: relative;
+      }
+
+      .seal::before,
+      .seal::after {
+        content: "";
+        position: absolute;
+        inset: 9px;
+        border-radius: 999px;
+        border: 1px solid rgba(183, 97, 62, 0.28);
+        transform: rotate(18deg);
+      }
+
+      .seal::after {
+        inset: 15px;
+        border-color: rgba(86, 127, 116, 0.34);
+        transform: rotate(-24deg);
+      }
+
+      .brand h1,
+      .hero h2,
+      .section-title,
+      .card h3,
+      .kicker,
+      .timeline__date,
+      .metric__value {
+        font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", serif;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+      }
+
+      .brand p {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .quick-links {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .quick-links a,
+      .source-link,
+      .nav a {
+        text-decoration: none;
+      }
+
+      .chip {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.55);
+        color: var(--ink);
+        font-size: 13px;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      }
+
+      .chip:hover,
+      .nav a:hover,
+      .source-link:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 30px rgba(39, 26, 18, 0.08);
+        border-color: rgba(183, 97, 62, 0.32);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.9fr);
+        gap: 18px;
+        margin-top: 10px;
+      }
+
+      .panel,
+      .card,
+      .nav {
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 251, 246, 0.6));
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .panel {
+        padding: 28px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .panel::after {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        right: -80px;
+        top: -80px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(199, 160, 103, 0.18), transparent 70%);
+        pointer-events: none;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 14px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.64);
+        border: 1px solid var(--line);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero h2 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 5vw, 58px);
+        line-height: 0.96;
+        letter-spacing: -0.03em;
+      }
+
+      .hero p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.75;
+        font-size: 16px;
+        max-width: 62ch;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .hero-actions a {
+        text-decoration: none;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 46px;
+        padding: 0 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(183, 97, 62, 0.26);
+        background: linear-gradient(180deg, rgba(183, 97, 62, 0.16), rgba(255, 255, 255, 0.62));
+        font-size: 14px;
+      }
+
+      .button.secondary {
+        border-color: rgba(86, 127, 116, 0.28);
+        background: linear-gradient(180deg, rgba(86, 127, 116, 0.14), rgba(255, 255, 255, 0.62));
+      }
+
+      .facts {
+        display: grid;
+        gap: 12px;
+      }
+
+      .fact {
+        padding: 18px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.52);
+        border: 1px solid rgba(36, 27, 23, 0.1);
+      }
+
+      .fact strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .fact span {
+        display: block;
+        font-size: 20px;
+        line-height: 1.3;
+      }
+
+      .main {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 18px;
+        margin-top: 18px;
+        align-items: start;
+      }
+
+      .nav {
+        position: sticky;
+        top: 92px;
+        padding: 18px;
+      }
+
+      .nav h3 {
+        margin: 0 0 12px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 8px;
+      }
+
+      .nav a {
+        display: block;
+        padding: 11px 12px;
+        border-radius: 14px;
+        border: 1px solid transparent;
+        background: rgba(255, 255, 255, 0.52);
+        font-size: 14px;
+      }
+
+      .content {
+        display: grid;
+        gap: 18px;
+      }
+
+      .card {
+        padding: 26px;
+      }
+
+      .section-title {
+        margin: 0 0 10px;
+        font-size: 30px;
+        letter-spacing: -0.02em;
+      }
+
+      .section-intro {
+        margin: 0 0 20px;
+        color: var(--muted);
+        line-height: 1.75;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .mini-card {
+        padding: 18px;
+        border-radius: 20px;
+        background: var(--card);
+        border: 1px solid rgba(36, 27, 23, 0.08);
+      }
+
+      .mini-card h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+
+      .mini-card p,
+      .mini-card li,
+      .timeline__body,
+      .focus-list li,
+      .portfolio-step li,
+      .sources li,
+      .callout p {
+        color: var(--muted);
+        line-height: 1.72;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .metric {
+        padding: 18px;
+        border-radius: 22px;
+        border: 1px solid rgba(36, 27, 23, 0.08);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 251, 246, 0.58)),
+          linear-gradient(135deg, var(--accent-soft), transparent 70%);
+      }
+
+      .metric__value {
+        font-size: 42px;
+        line-height: 1;
+        margin-bottom: 10px;
+      }
+
+      .metric__label {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .timeline {
+        display: grid;
+        gap: 14px;
+      }
+
+      .timeline__item {
+        display: grid;
+        grid-template-columns: 140px minmax(0, 1fr);
+        gap: 16px;
+        align-items: start;
+        padding: 16px 0;
+        border-top: 1px solid rgba(36, 27, 23, 0.08);
+      }
+
+      .timeline__item:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .timeline__date {
+        font-size: 22px;
+      }
+
+      .timeline__title {
+        margin: 0 0 6px;
+        font-size: 18px;
+      }
+
+      .tag-row,
+      .course-cloud,
+      .source-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .tag {
+        display: inline-flex;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.66);
+        border: 1px solid rgba(36, 27, 23, 0.08);
+        font-size: 13px;
+      }
+
+      .callout {
+        margin-top: 18px;
+        padding: 18px;
+        border-left: 4px solid var(--accent);
+        border-radius: 18px;
+        background: rgba(183, 97, 62, 0.08);
+      }
+
+      .portfolio-steps {
+        display: grid;
+        gap: 14px;
+      }
+
+      .portfolio-step {
+        padding: 18px;
+        border-radius: 20px;
+        border: 1px solid rgba(36, 27, 23, 0.08);
+        background: var(--card);
+      }
+
+      .portfolio-step h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .focus-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .focus-list li {
+        padding: 14px 16px;
+        border-radius: 16px;
+        border: 1px solid rgba(36, 27, 23, 0.08);
+        background: rgba(255, 255, 255, 0.58);
+      }
+
+      .sources {
+        display: grid;
+        gap: 10px;
+      }
+
+      .source-link {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.58);
+        border: 1px solid rgba(36, 27, 23, 0.08);
+      }
+
+      .source-link span:last-child {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .footer-note {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      @media (max-width: 980px) {
+        .hero,
+        .main,
+        .grid,
+        .metrics,
+        .two-col {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          position: static;
+        }
+
+        .timeline__item {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .shell {
+          padding: 16px 14px 60px;
+        }
+
+        .masthead {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .panel,
+        .card,
+        .nav {
+          padding: 20px;
+          border-radius: 24px;
+        }
+
+        .hero h2 {
+          font-size: 34px;
+        }
+
+        .fact span {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="masthead">
+        <div class="brand">
+          <div class="seal" aria-hidden="true"></div>
+          <div>
+            <h1>Brera 艺术治疗申请指南</h1>
+            <p>为应用心理学背景申请者整理的可视化阅读版</p>
+          </div>
+        </div>
+        <div class="quick-links">
+          <a class="chip" href="#portfolio">查看作品集结构</a>
+          <a class="chip" href="#sources">跳转官方来源</a>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="panel">
+          <div class="kicker">Visual Arts · Psychology · Care</div>
+          <h2>把心理学背景，转化成面向艺术治疗的申请优势。</h2>
+          <p>
+            这份页面围绕你当前的目标来组织信息：判断学校与项目是否匹配、你该如何叙述自己的背景、该申什么项目、何时做什么，以及作品集如何呈现“对人、身体、情绪与表达”的持续关注。
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#fit">看我的适配性</a>
+            <a class="button secondary" href="#timeline">看申请时间线</a>
+          </div>
+        </div>
+
+        <aside class="panel facts">
+          <div class="fact">
+            <strong>目标院校</strong>
+            <span>Accademia di Belle Arti di Brera（米兰布雷拉美术学院）</span>
+          </div>
+          <div class="fact">
+            <strong>建议项目</strong>
+            <span>Teorie e pratiche della terapeutica artistica</span>
+          </div>
+          <div class="fact">
+            <strong>你的优势</strong>
+            <span>应用心理学本科 + 对艺术治疗明确有长期方向感</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="main">
+        <nav class="nav" aria-label="页面导航">
+          <h3>目录</h3>
+          <ul>
+            <li><a href="#academy">学院信息</a></li>
+            <li><a href="#program">专业信息</a></li>
+            <li><a href="#fit">我的适配性</a></li>
+            <li><a href="#recommended">建议申请项目</a></li>
+            <li><a href="#timeline">申请信息</a></li>
+            <li><a href="#focus">重点关注</a></li>
+            <li><a href="#portfolio">作品集准备方向</a></li>
+            <li><a href="#sources">源头网站</a></li>
+          </ul>
+        </nav>
+
+        <div class="content">
+          <section class="card" id="academy">
+            <h2 class="section-title">学院信息</h2>
+            <p class="section-intro">
+              你提到的“布雷达美院/大学”，结合“视觉艺术 + 艺术治疗”这一意向，更准确的目标应是位于米兰的
+              <strong>布雷拉美术学院 Brera</strong>。它不是传统意义上只强调纯技法的学院，而是存在将艺术、教育、照护与研究连接起来的教学与活动脉络。
+            </p>
+            <div class="grid">
+              <article class="mini-card">
+                <h3>学校气质</h3>
+                <p>
+                  Brera 的公开课程与活动显示，它重视当代艺术语言、跨媒介实验、身体与空间感知，也允许学生把艺术放回真实社会场景中理解，而不是只停留在画室里。
+                </p>
+              </article>
+              <article class="mini-card">
+                <h3>与艺术治疗的连接</h3>
+                <p>
+                  学校官网可见独立的艺术治疗方向课程页，并举办过把“艺术、教育、照护”联系在一起的活动。这说明它不是临时拼接概念，而是有比较稳定的教学意图。
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="card" id="program">
+            <h2 class="section-title">专业信息</h2>
+            <p class="section-intro">
+              你最适合关注的不是泛泛的“视觉艺术硕士”，而是 Brera 的二级文凭项目
+              <strong>Teorie e pratiche della terapeutica artistica</strong>。它的培养方向更接近“艺术语言如何进入照护、教育与关系性场景”。
+            </p>
+            <div class="course-cloud" aria-label="你感兴趣的课程关键词">
+              <span class="tag">艺术治疗的原理和技巧 1 / 2</span>
+              <span class="tag">精神病学基础</span>
+              <span class="tag">身体现象学</span>
+              <span class="tag">身体符号学</span>
+              <span class="tag">当代艺术史</span>
+              <span class="tag">综合色达技巧</span>
+              <span class="tag">儿童创造性实践</span>
+              <span class="tag">声音空间设计</span>
+              <span class="tag">Extramediali 技术</span>
+            </div>
+            <div class="callout">
+              <p>
+                这批课程之所以适合你，是因为它们不是单纯训练“做作品”，而是在训练你如何理解情绪、身体、象征、材料、空间和人与人的关系，并将这些理解转化为具有支持性的视觉与表达实践。
+              </p>
+            </div>
+          </section>
+
+          <section class="card" id="fit">
+            <h2 class="section-title">我的适配性</h2>
+            <p class="section-intro">
+              你的背景并不是“心理学转艺术”的劣势，反而更像这个项目最想看到的跨学科起点。关键在于你要把心理学训练解释为一种对人的观察、对情绪的敏感、对关系和情境的理解能力。
+            </p>
+            <div class="metrics">
+              <div class="metric">
+                <div class="metric__value">9/10</div>
+                <div class="metric__label">方向匹配度：心理学与艺术治疗叙事高度一致</div>
+              </div>
+              <div class="metric">
+                <div class="metric__value">8/10</div>
+                <div class="metric__label">课程呼应度：你感兴趣的课与未来职业目标直接相关</div>
+              </div>
+              <div class="metric">
+                <div class="metric__value">7/10</div>
+                <div class="metric__label">当前关键变量：作品集质量与意大利语表达能力</div>
+              </div>
+            </div>
+            <div class="two-col" style="margin-top: 14px;">
+              <article class="mini-card">
+                <h3>你可以怎样定义自己</h3>
+                <p>
+                  “我不是从心理学跳去艺术，而是在把对情绪、发展、关系与非语言表达的理解，转化成以图像、身体、材料和空间为媒介的工作能力。”
+                </p>
+              </article>
+              <article class="mini-card">
+                <h3>招生老师最可能看重什么</h3>
+                <p>
+                  作品集中是否真正体现对人的关注、是否具有持续创作轨迹、是否能把个人经历和社会性照护场景联系起来，以及你是否清楚知道自己为什么选择 Brera。
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="card" id="recommended">
+            <h2 class="section-title">建议申请项目</h2>
+            <p class="section-intro">
+              优先建议申请 <strong>Brera 艺术治疗方向二级文凭</strong>。如果你的目标是未来进入艺术治疗相关工作，这比申请一个泛视觉艺术项目更能形成清晰、可信的专业路径。
+            </p>
+            <div class="grid">
+              <article class="mini-card">
+                <h3>项目定位</h3>
+                <p>
+                  培养能够使用艺术语言与治疗团队、教育场域、社会照护机构协作的专业人士。适合“想把艺术实践转化为支持性工作”的申请者。
+                </p>
+              </article>
+              <article class="mini-card">
+                <h3>为什么比纯视觉艺术更合适</h3>
+                <p>
+                  你的叙事重点不该是“我要成为职业画家”，而应该是“我要发展基于艺术的关系工作能力”。这个项目的课程与实习结构更能支持这一路线。
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="card" id="timeline">
+            <h2 class="section-title">申请信息</h2>
+            <p class="section-intro">
+              以下时间节点基于 Brera 国际生页面截至 <strong>2026年5月7日</strong> 可见信息整理。由于你补充说自己持有意大利绿卡，如果该证件属于长期合法居留，你很可能不走“需学生签证”的国际预注册路径，这点建议直接写信向学校确认。
+            </p>
+            <div class="timeline">
+              <div class="timeline__item">
+                <div class="timeline__date">5月4日</div>
+                <div>
+                  <h3 class="timeline__title">Brera 校内系统开放报名</h3>
+                  <div class="timeline__body">开始注册学院系统、准备考试申请、整理翻译文件与作品集框架。</div>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__date">6月22日</div>
+                <div>
+                  <h3 class="timeline__title">国际生页面所列截止日</h3>
+                  <div class="timeline__body">
+                    对需要签证的人，这是 Universitaly 预注册与学校报名的关键节点。若你属于已在意大利合法居留者，应确认是否改走本地考生/现场考试路径。
+                  </div>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__date">7月初</div>
+                <div>
+                  <h3 class="timeline__title">语言测试与面试期</h3>
+                  <div class="timeline__body">
+                    学校页面提到国际候选人的意大利语口试与面试多安排在 7 月。面试重点通常会回到动机、作品和背景匹配度。
+                  </div>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__date">9月23日</div>
+                <div>
+                  <h3 class="timeline__title">首轮确认注册期限</h3>
+                  <div class="timeline__body">录取后及时完成注册与后续手续，避免因为系统阶段不同而错过名额。</div>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__date">9月28日</div>
+                <div>
+                  <h3 class="timeline__title">课程预计开始</h3>
+                  <div class="timeline__body">建议在课程开始前完成住宿、城市适应、语言过渡与基础阅读准备。</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card" id="focus">
+            <h2 class="section-title">重点关注</h2>
+            <p class="section-intro">
+              真正决定你申请质量的，不是“是不是科班美术生”，而是你是否能把兴趣、背景与项目目标讲成一条完整路线。
+            </p>
+            <div class="two-col">
+              <ul class="focus-list">
+                <li>确认你的“意大利绿卡”具体证件类型，判断是否无需走学生签证与 Universitaly 流程。</li>
+                <li>把心理学背景转化成视觉叙事优势，而不是只强调“我会帮助别人”。</li>
+                <li>意大利语至少要能支撑面试、课堂讨论与场景表达，B2 是起点，接近 C1 更安全。</li>
+              </ul>
+              <ul class="focus-list">
+                <li>面试要能解释为什么选择 Brera，而不是其他普通视觉艺术项目。</li>
+                <li>作品集要体现身体、情绪、材料、关系和空间，不要只放临摹或炫技作品。</li>
+                <li>若有社区、教育、志愿服务经历，要主动纳入申请材料和自我叙述。</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="card" id="portfolio">
+            <h2 class="section-title">作品集准备方向</h2>
+            <p class="section-intro">
+              最适合你的作品集不是商业设计集，也不是纯绘画训练册，而是一份带有研究气质的“视觉档案”：它要让招生老师看到你如何把心理学的观察转成图像、材料、身体和空间语言。
+            </p>
+            <div class="portfolio-steps">
+              <article class="portfolio-step">
+                <h3>1. 封面 + 个人定位</h3>
+                <ul>
+                  <li>写明姓名、申请项目、联系方式。</li>
+                  <li>副标题建议围绕“psychology, body, image, care”展开。</li>
+                  <li>个人陈述页重点写：为什么从心理学走向艺术治疗，而不是泛泛谈热爱艺术。</li>
+                </ul>
+              </article>
+              <article class="portfolio-step">
+                <h3>2. 情绪与自我视觉研究</h3>
+                <ul>
+                  <li>可放绘画、拼贴、摄影、视觉日记、色彩实验。</li>
+                  <li>主题建议围绕焦虑、记忆、孤独、迁移、边界、安全感。</li>
+                  <li>目标是呈现“内在经验如何被视觉化”。</li>
+                </ul>
+              </article>
+              <article class="portfolio-step">
+                <h3>3. 身体与空间</h3>
+                <ul>
+                  <li>回应你感兴趣的“身体现象学”“身体符号学”“声音空间设计”。</li>
+                  <li>可以做身体轮廓、动作痕迹、空间观察、装置草图、感知记录。</li>
+                  <li>让老师看到你理解表达并不只发生在纸面上。</li>
+                </ul>
+              </article>
+              <article class="portfolio-step">
+                <h3>4. 材料与媒介实验</h3>
+                <ul>
+                  <li>使用纸张、布料、线、透明材质、旧照片或声音笔记。</li>
+                  <li>同一主题做多媒介转译，展示你不是只会单一图像形式。</li>
+                  <li>这一组能很好呼应当代方法、纸张技术、extramediali 等课程兴趣。</li>
+                </ul>
+              </article>
+              <article class="portfolio-step">
+                <h3>5. 小型工作坊 / 准实践项目</h3>
+                <ul>
+                  <li>哪怕没有正式艺术治疗经验，也可以设计一个面向儿童、压力人群或跨文化个体的表达性活动方案。</li>
+                  <li>说明对象、目标、媒介、活动流程和你的观察点。</li>
+                  <li>这是最能证明你真的在靠近艺术治疗，而不是只停留在概念层面的部分。</li>
+                </ul>
+              </article>
+              <article class="portfolio-step">
+                <h3>6. 研究兴趣与简历收束</h3>
+                <ul>
+                  <li>最后用一页总结研究关键词：art and emotion、body and perception、symbolic expression、children and care 等。</li>
+                  <li>作品集总页数建议控制在 10 到 15 页，12 页左右最稳。</li>
+                  <li>排版风格适合留白、少量注释、统一字体和稳定色调。</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="card" id="sources">
+            <h2 class="section-title">源头网站</h2>
+            <p class="section-intro">
+              这里放的是你后续最值得反复查看的官方页面与参考链接。建议收藏后按“课程页、国际生页、未来学生页、学校活动页”的顺序读。
+            </p>
+            <div class="sources">
+              <a class="source-link" href="https://www.accademiadibrera.milano.it/index.php/en/art-therapy-2-level" target="_blank" rel="noreferrer">
+                <span>Brera Art Therapy 课程页</span>
+                <span>课程结构与培养目标</span>
+              </a>
+              <a class="source-link" href="https://www.accademiadibrera.milano.it/index.php/it/terapeutica-artistica-2-livello" target="_blank" rel="noreferrer">
+                <span>Brera 艺术治疗意大利语课程页</span>
+                <span>原项目名称与课程环境</span>
+              </a>
+              <a class="source-link" href="https://www.accademiadibrera.milano.it/it/studenti-internazionali" target="_blank" rel="noreferrer">
+                <span>Brera 国际学生页面</span>
+                <span>时间节点、适用对象与流程说明</span>
+              </a>
+              <a class="source-link" href="https://www.accademiadibrera.milano.it/it/svolgimento-degli-esami-dammissione-biennio" target="_blank" rel="noreferrer">
+                <span>Brera Biennio 入学考试说明</span>
+                <span>研究生层级考试方式</span>
+              </a>
+              <a class="source-link" href="https://www.accademiadibrera.milano.it/index.php/en/brera-future-students" target="_blank" rel="noreferrer">
+                <span>Brera Future Students</span>
+                <span>开放日与未来学生入口</span>
+              </a>
+              <a class="source-link" href="https://www.accademiadibrera.milano.it/it/di-arte-arte-linguaggi-artistici-la-formazione-e-la-cura" target="_blank" rel="noreferrer">
+                <span>Di Arte in Arte 活动页</span>
+                <span>艺术、教育与照护的官方活动</span>
+              </a>
+              <a class="source-link" href="https://www.accademiadibrera.milano.it/it/la-terapeutica-dellarte-e-i-linguaggi-digitali-quale-legame-possibile-strumenti-e-metodi-progettare" target="_blank" rel="noreferrer">
+                <span>艺术治疗与数字语言活动页</span>
+                <span>跨媒介与方法论信号</span>
+              </a>
+              <a class="source-link" href="https://www.accademiadibrera.milano.it/en/international-students-office" target="_blank" rel="noreferrer">
+                <span>International Students Office</span>
+                <span>后续写信确认身份流程可用</span>
+              </a>
+              <a class="source-link" href="https://x.com/search?q=%22Accademia%20di%20Brera%22%20%22terapeutica%20artistica%22&src=typed_query" target="_blank" rel="noreferrer">
+                <span>X 搜索页示例</span>
+                <span>X 上公开信息较少，可作补充检索</span>
+              </a>
+            </div>
+            <p class="footer-note">
+              说明：X 上关于 Brera 艺术治疗的公开可读内容相对稀少，学校对这一方向的稳定信息主要还是集中在官网课程页、招生页与活动页。若你后续需要，我可以继续把这个页面扩展成“带动机信模板”和“作品集逐页文案”的完整版本。
+            </p>
+          </section>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
